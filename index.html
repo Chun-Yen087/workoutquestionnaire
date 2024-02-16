@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chun's Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header text-center">
+            <h1 id="title">Chun's Form</h1>
+        </div>
+        <p id="description">This is a form for anyone stumbling upon this website while looking for healthy or workout advice. Would you mind answering a few questions?</p>
+        
+        <form id="survey-form">
+            <div class="row">
+                <div class="form-group col-12 col-xl-6">
+                    <label for="name">Enter Your Name:</label>
+                    <input type="text" id="name" placeholder="ChunYenWu" required class="form-control">
+                </div>
+                <div class="form-group col-12 col-xl-6">
+                    <label for="email">Enter Your Email:</label>
+                    <input id="email" type="email" placeholder="adajnana@gmail.com" required class="form-control">
+                </div>
+                <div class="form-group col-12 col-xl-6">
+                    <label for="number">Enter Your Age:</label>
+                    <input id="number" type="number" min="18" max="100" placeholder="(18 - 100 years old..)" class="form-control">
+                </div>
+                <div class="form-group col-12 col-xl-6">
+                    <label for="dropdown">How often do you exercise a week:</label>
+                    <select class="form-control" id="dropdown">
+                        <option disabled selected value>Select an Option</option>
+                        <option value="sedentary">Sedentary (little or no exercise)</option>
+                        <option value="lightlyActive">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                        <option value="moderatelyActive">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                        <option value="veryActive">Very Active (hard exercise/sports 6-7 days a week)</option>
+                        <option value="extraActive">Extra Active (very hard exercise/sports & physical job or 2x training)</option>
+                    </select>
+                </div>
+            </div>
+             <div class="row">
+             <div class="form-group col-12 col-xl-6">
+                <legend>Account type (required)</legend>
+                <fieldset>
+                    <label for="fitness-account"><input id="fitness-account" type="radio" name="account-type" class="inline" value="Fitness" checked> Fitness</label>
+                    <label for="powerlift-account"><input id="powerlift-account" type="radio" name="account-type" value="Powerlift" class="inline"> Powerlifting</label>
+                    <label for="calisthenics-account"><input id="calisthenics-account" type="radio" name="account-type" value="Calisthenics" class="inline"> Calisthenics</label>
+                </fieldset>
+            </div>
+            
+             <div class="form-group col-12 col-xl-6">
+                <p>How would you like us to contact you?<span class="help">(check all that apply)</span></p>
+                <fieldset>
+                    <label><input type="checkbox" value="email" class="inline"> Email</label>
+                    <label><input type="checkbox" value="cellphone" class="inline"> Cellphone</label>
+                    <label><input type="checkbox" value="visit" class="inline"> In person visit</label>
+                </fieldset>
+             </div>
+            
+            
+             <div class="form-group col-12 col-xl-6"> 
+                <label for="comment">Can you provide us some feedback about this website?</label>
+                <textarea id="comment" rows="3" cols="40" placeholder="Write something about this website......"></textarea>
+             </div>
+
+             <div class="form-group col-12 col-xl-6"> 
+                <label for="additional">Any additional information you would like to tell us?</label>
+                <textarea id="comment" rows="3" cols="40" placeholder="if have have any allergy or more question for us......"></textarea>
+             </div>
+
+            </div>
+            
+            <input id="button" type="button" value="Submit" class="col-12  btn btn-light text-center">
+            
+        </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var submitBtn = document.getElementById('button')
+            submitBtn.addEventListener('click', function() {
+                window.location.href = 'thank.html';
+            });
+        });
+        </script>
+    </div>
+</body>
+</html>
